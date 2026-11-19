@@ -182,3 +182,4 @@ INSERT INTO courses (code, name, credits, semester, lecturer_id) VALUES
 ```
 
 ## Dokumentasi
+https://github.com/user-attachments/assets/d86cd04f-dcd4-4d69-b723-6cf319844340

@@ -116,8 +116,8 @@ Menyimpan data mata kuliah dan memiliki relasi *Many-to-One* ke tabel `lecturers
 | `id`          | `INT AUTO_INCREMENT`          | **Primary Key**                                                   |
 | `code`        | `VARCHAR(10) NOT NULL UNIQUE` | Kode mata kuliah unik                                             |
 | `name`        | `VARCHAR(100) NOT NULL`       | Nama mata kuliah                                                  |
-| `credits`     | `TINYINT NOT NULL DEFAULT 3`  | Jumlah SKS                                                        |
-| `semester`    | `TINYINT NOT NULL`            | Semester                                                          |
+| `credits`     | `INT NOT NULL DEFAULT 3`      | Jumlah SKS                                                        |
+| `semester`    | `INT NOT NULL`                | Semester                                                          |
 | `lecturer_id` | `INT NOT NULL`                | **Foreign Key** mengacu ke `lecturers(id)`, `ON DELETE CASCADE`   |
 
 **Relasi:**
@@ -158,8 +158,8 @@ CREATE TABLE courses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(10) NOT NULL UNIQUE,
   name VARCHAR(100) NOT NULL,
-  credits TINYINT NOT NULL DEFAULT 3,
-  semester TINYINT NOT NULL,
+  credits INT NOT NULL DEFAULT 3,
+  semester INT NOT NULL,
   lecturer_id INT NOT NULL,
   CONSTRAINT fk_course_lecturer FOREIGN KEY (lecturer_id)
     REFERENCES lecturers(id) ON DELETE CASCADE ON UPDATE CASCADE

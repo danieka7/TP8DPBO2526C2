@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DATA_JUDUL</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.php">Lecturers</a></li>
+          <li class="nav-item"><a class="nav-link" href="department.php">Departments</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="course.php">Courses</a></li>
+        </ul>
+        <span class="navbar-brand"><strong>Data Dosen</strong></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-4 my-3">
+        DATA_ALERT
+        <div class="card p-4">
+          <h2 class="card-title">DATA_FORM_HEADER</h2>
+          <form action="course.php" method="POST">
+            <input type="hidden" name="id" value="DATA_ID" />
+
+            <label class="form-label mt-2" for="tcode">Kode MK</label>
+            <input type="text" class="form-control" id="tcode" name="tcode" value="DATA_CODE" maxlength="10" required />
+
+            <label class="form-label mt-2" for="tname">Nama Mata Kuliah</label>
+            <input type="text" class="form-control" id="tname" name="tname" value="DATA_NAME" required />
+
+            <label class="form-label mt-2" for="tcredits">SKS</label>
+            <input type="number" class="form-control" id="tcredits" name="tcredits" value="DATA_CREDITS" min="1" max="6" required />
+
+            <label class="form-label mt-2" for="tsemester">Semester</label>
+            <input type="number" class="form-control" id="tsemester" name="tsemester" value="DATA_SEMESTER" min="1" max="8" required />
+
+            <label class="form-label mt-2" for="cmbdosen">Dosen Pengampu</label>
+            <select class="form-select" id="cmbdosen" name="cmbdosen" required>
+              <option value="">- Pilih dosen -</option>
+              DATA_OPTION
+            </select>
+
+            <button type="submit" name="DATA_ACTION" class="btn btn-primary mt-3">DATA_BUTTON</button>
+            DATA_CANCEL
+          </form>
+        </div>
+      </div>
+      <div class="col-12 col-lg-8 my-3">
+        <h1 class="text-center mt-3 mb-4">Tabel Mata Kuliah</h1>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tr class="text-center align-middle table-dark">
+              <th>No</th>
+              <th>Kode</th>
+              <th>Nama Mata Kuliah</th>
+              <th>SKS</th>
+              <th>Semester</th>
+              <th>Dosen</th>
+              <th>Aksi</th>
+            </tr>
+            DATA_TABEL
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

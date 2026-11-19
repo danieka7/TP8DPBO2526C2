@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DATA_JUDUL</title>
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Lecturers</a></li>
+          <li class="nav-item"><a class="nav-link" href="department.php">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="course.php">Courses</a></li>
+        </ul>
+        <span class="navbar-brand"><strong>Data Dosen</strong></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-4 my-3">
+        <div class="card p-4">
+          <h2 class="card-title">DATA_FORM_HEADER</h2>
+          <form action="index.php" method="POST">
+            <input type="hidden" name="id" value="DATA_ID" />
+
+            <label class="form-label mt-2" for="tname">Nama</label>
+            <input type="text" class="form-control" id="tname" name="tname" value="DATA_NAME" required />
+
+            <label class="form-label mt-2" for="tnidn">NIDN</label>
+            <input type="text" class="form-control" id="tnidn" name="tnidn" value="DATA_NIDN" required />
+
+            <label class="form-label mt-2" for="tphone">No. HP</label>
+            <input type="text" class="form-control" id="tphone" name="tphone" value="DATA_PHONE" required />
+
+            <label class="form-label mt-2" for="temail">Email</label>
+            <input type="email" class="form-control" id="temail" name="temail" value="DATA_EMAIL" />
+
+            <label class="form-label mt-2" for="tjoin">Tanggal Bergabung</label>
+            <input type="date" class="form-control" id="tjoin" name="tjoin" value="DATA_JOIN" required />
+
+            <label class="form-label mt-2" for="cmbdept">Prodi</label>
+            <select class="form-select" id="cmbdept" name="cmbdept">
+              <option value="">- Tidak ada -</option>
+              DATA_OPTION
+            </select>
+
+            <button type="submit" name="DATA_ACTION" class="btn btn-primary mt-3">DATA_BUTTON</button>
+            DATA_CANCEL
+          </form>
+        </div>
+      </div>
+      <div class="col-12 col-lg-8 my-3">
+        <h1 class="text-center mt-3 mb-4">Tabel Dosen</h1>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <tr class="text-center align-middle table-dark">
+              <th>No</th>
+              <th>Nama</th>
+              <th>NIDN</th>
+              <th>No. HP</th>
+              <th>Email</th>
+              <th>Bergabung</th>
+              <th>Prodi</th>
+              <th>Jml MK</th>
+              <th>Aksi</th>
+            </tr>
+            DATA_TABEL
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
